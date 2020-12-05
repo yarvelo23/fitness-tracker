@@ -10,3 +10,6 @@ async function init() {
     }
   }
 }
+
+
+module.exports = router;

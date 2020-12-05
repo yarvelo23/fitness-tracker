@@ -23,8 +23,8 @@ console.log("Connected to DB")
 );
 
 // routes
-app.use(require("./routes/api-routes"));
-app.use(require("./routes/html-routes"));
+app.use("/api", require("./routes/api-routes.js"));
+app.use("/", require("./routes/html-routes.js"));
 
 app.listen(PORT, () => {
   console.log(`🌎 App running on port ${PORT}!`);
