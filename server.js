@@ -20,11 +20,15 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // mongodb connection
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
-  useNewUrlParser: true,
-  useFindAndModify: false
-
-}, () => 
+mongoose.connect(
+    process.env.MONGODB_URI || "mongodb://localhost/pacific-chamber-31516", 
+    {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useCreateIndex: true,
+            useFindAndModify: false
+    }
+, () => 
 console.log("Connected to DB")
 );
 
